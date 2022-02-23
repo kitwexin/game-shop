@@ -1,1 +1,1 @@
-# game_shop
+# game-shop
