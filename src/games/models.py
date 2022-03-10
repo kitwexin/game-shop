@@ -21,11 +21,10 @@ class Game(models.Model):
         Company,
         on_delete = models.CASCADE,
         verbose_name = 'Development company',
-        default = 'Unknown'
+        default = 'Unknown',
     )
-    genre = models.ForeignKey(
+    genre = models.ManyToManyField(
         Genre,
-        on_delete = models.CASCADE,
         verbose_name = 'Game genre',
         default = 'No genre'
     )
