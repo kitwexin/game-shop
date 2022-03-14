@@ -1,4 +1,7 @@
 from django.contrib import admin
-from . import models
+from .models import Game
 
-admin.site.register(models.Game)
+
+@admin.register(Game)
+class GameAdmin(admin.ModelAdmin):
+    pass
