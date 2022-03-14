@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %} Delete game {{ object.name }} {% endblock title %}
+{% block body %}
+    <center>
+{% if user.is_staff %}
+<div class="container">
+<h1>Delete game "{{ object.name }}"</h1>
+  <form action="" method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Are you sure?</button>
+  </form>
+</div>
+{% else %}
+<h1>Staff only!</h1>
+{% endif %}
+    </center>
+{% endblock body %}

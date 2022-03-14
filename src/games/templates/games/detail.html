@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %} Game {{ object.name }} {% endblock title %}
+{% block body %}
+    <center>
+<h1>Game "{{ object.name }}"</h1>
+<div>
+   Name - {{ object.name }}
+    <br>
+    Price - {{ object.price }}
+    <br>
+    Release date - {{ object.release_date }}
+    <br>
+    <!-- Cover - <img src="{{ object.image }}" alt="" width="189" height="255">
+    <br>  -->
+    Age limit - {{ object.age_limit }}
+    <br>     
+    Company - {{ object.development_company }}
+    <br>
+    Genre - {{ object.genre }}
+    <br>
+    Description - {{ object.description }}
+    </div>
+    </center>
+{% endblock body %}

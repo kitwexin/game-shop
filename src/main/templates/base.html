@@ -21,7 +21,7 @@
                 {% if user.is_superuser %}
               <a class="me-3 py-2 text-dark text-decoration-none" href="/admin">Admin's side</a>
                 {% endif %}
-              <a class="me-3 py-2 text-dark text-decoration-none" href="#">Another link</a>
+              <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'games:list' %}">Games list</a>
               <a class="me-3 py-2 text-dark text-decoration-none" href="#">Great link</a>
               <a class="py-2 text-dark text-decoration-none" href="/about-us">About company</a>
             </nav>
