@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} Games list {% endblock title %}
+{% block title %} Genres list {% endblock title %}
 {% block body %}
 <div class="container">
-<h1>All games</h1>
+<h1>All genres</h1>
   {% if  user.is_staff %}
-  <a href="{% url 'games:create' %}" class="btn btn-success">Add new game</a>
+  <a href="{% url 'genres:create' %}" class="btn btn-success">Add new genre</a>
   {% else %}
   {% endif %}
   <table class="table bordered-table">
@@ -16,11 +16,11 @@
   {% for row in object_list %}
   <tr>
     <td>{{ row.pk }}</td>
-    <td><a href="{% url 'games:detail' row.pk %}">{{ row.name }}</a></td>
+    <td><a href="{% url 'genres:detail' row.pk %}">{{ row.name }}</a></td>
     {% if  user.is_staff %}
     <td>
-    <a href="{% url 'games:update' row.pk %}"><i class="fas fa-edit">Edit</i></a>
-    <a href="{% url 'games:delete' row.pk %}"><i class="fas fa-trash-alt">Delete</i></a>
+    <a href="{% url 'genres:update' row.pk %}"><i class="fas fa-edit">Edit</i></a>
+    <a href="{% url 'genres:delete' row.pk %}"><i class="fas fa-trash-alt">Delete</i></a>
     </td>
   {% endif %}
   </tr>

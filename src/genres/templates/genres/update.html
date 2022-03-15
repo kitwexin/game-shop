@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %} Update genre {{ object.name }} {% endblock title %}
+{% block body %}
+    <center>
+{% if user.is_staff %}
+<div class="container">
+<h1>Update genre</h1>
+<form action="" method="post"  enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-danger">Send</button>
+</form>
+</div>
+{% else %}
+<h1>Staff only!</h1>
+{% endif %}
+    </center>
+{% endblock body %}

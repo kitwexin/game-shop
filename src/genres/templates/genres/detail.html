@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %} Genre {{ object.name }} {% endblock title %}
+{% block body %}
+    <center>
+<h1>Genre "{{ object.name }}"</h1>
+<div>
+    <br>
+    Description - {{ object.description }}
+    </div>
+    </center>
+{% endblock body %}
